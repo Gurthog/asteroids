@@ -45,7 +45,7 @@ def main():
             for shot in shots:
                 if rock.detect_collision(shot):
                     shot.kill()
-                    rock.kill()
+                    rock.split()
 
         screen.fill("black")
         for member in drawable:
