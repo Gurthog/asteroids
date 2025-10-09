@@ -36,10 +36,16 @@ def main():
                 return
 
         updatable.update(dt)
+
         for rock in asteroids:
             if rock.detect_collision(player):
                 print("Game over!")
                 return
+
+            for shot in shots:
+                if rock.detect_collision(shot):
+                    shot.kill()
+                    rock.kill()
 
         screen.fill("black")
         for member in drawable:
