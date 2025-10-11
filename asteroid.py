@@ -2,7 +2,10 @@ import random
 
 import pygame
 
-from constants import ASTEROID_MIN_RADIUS, ASTEROID_MAX_RADIUS
+from constants import (
+    GAME_SPEED,
+    ASTEROID_MIN_RADIUS,
+)
 from circleshape import CircleShape
 
 
@@ -20,7 +23,7 @@ class Asteroid(CircleShape):
         )
 
     def update(self, dt):
-        self.position += self.velocity * dt
+        self.position += self.velocity * GAME_SPEED * dt
 
     def split(self):
         self.kill()

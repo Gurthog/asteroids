@@ -1,6 +1,9 @@
 import pygame
 
-from constants import SHOT_RADIUS
+from constants import (
+    GAME_SPEED,
+    SHOT_RADIUS,
+)
 from circleshape import CircleShape
 
 
@@ -9,7 +12,7 @@ class Shot(CircleShape):
         super().__init__(x, y, SHOT_RADIUS)
 
     def update(self, dt):
-        self.position += self.velocity * dt
+        self.position += self.velocity * GAME_SPEED * dt
 
     def draw(self, surface):
         pygame.draw.circle(
