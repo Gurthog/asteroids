@@ -2,11 +2,11 @@ import random
 
 import pygame
 
+from circleshape import CircleShape
 from constants import (
     GAME_SPEED,
     ASTEROID_MIN_RADIUS,
 )
-from circleshape import CircleShape
 
 
 class Asteroid(CircleShape):
